@@ -1,0 +1,15 @@
+version: 2.1
+
+jobs:
+  saludo:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run:
+          name: Mostrar mensaje DevOps
+          command: echo "Hola DevOps - IDGS10"
+
+workflows:
+  pipeline-devops:
+    jobs:
+      - saludo
